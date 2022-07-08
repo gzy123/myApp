@@ -8,7 +8,7 @@ const msg = require('fs')
 
 const commitRE = /^(feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|release|workflow)(\(.+\))?: .{1,80}/
 
-if (!commitRE.test(msg)) {
+if (commitRE.test(msg)) {
     console.log(msg)
     console.error(
     `  ${chalk.bgRed.white(' ERROR ')} ${chalk.red(
